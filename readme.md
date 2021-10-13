@@ -1,8 +1,10 @@
-TestUser@demo.com
-demo
+Demo users for logining -
 
-akshat@testing.com
-welcome
+id - TestUser@demo.com
+password - demo
+
+id - akshat@testing.com
+password - welcome
 
 Note:
 1. facing issue for 'forgot password and password reset operation' but implementation is complete.
