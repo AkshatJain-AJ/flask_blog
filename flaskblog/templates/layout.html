@@ -77,21 +77,53 @@
 
                     {% block content %}{% endblock %}
                 </div>
-                <div class="col-md-4">
-                    <div class="content-section">
-                        <h3>Our Sidebar</h3>
+                {% if current_user.is_authenticated %}
+                    <div class="col-md-4">
+                        <div class="content-section">
+                            <h3>Our Sidebar</h3>
 
-                        <p class='text-muted'>
-                            You can put any information here you'd like.
-                            <ul class="list-group">
-                                <li class="list-group-item list-group-item-light">Latest Posts</li>
-                                <li class="list-group-item list-group-item-light">Announcements</li>
-                                <li class="list-group-item list-group-item-light">Calendars</li>
-                                <li class="list-group-item list-group-item-light">etc</li>
-                            </ul>
-                        </p>
+                            <p class='text-muted'>
+                                Search filters that you can apply over the posts!
+                                
+                                <ul class="list-group">
+                                    <li class="list-group-item list-group-item-light">
+                                        <form class='form-inline' method='GET' action='searchText'>
+                                            <input class="form-control mr-sm-2"
+                                                   id="search-input" 
+                                                   name="search-input"
+                                                   type="search" 
+                                                   placeholder="Search in Title" 
+                                                   aria-label="Search">
+                                            </input>
+                                            
+                                            <br>
+                                            <button type="submit" class="btn btn-primary">Search</button>
+                                        </form>
+                                    </li>
+
+                                    <li class="list-group-item list-group-item-light">
+                                        <form class='form-inline' method='GET' action='searchDate'>
+                                            <input class="form-control mr-sm-2"
+                                                   id="date-input" 
+                                                   name="date-input"
+                                                   type="text" 
+                                                   placeholder="Search in Date"
+                                                   onfocus="(this.type='date')"  
+                                                   aria-label="Date">
+                                            </input>
+                                            
+                                            <br>
+                                            <button type="submit" class="btn btn-primary">Search</button>
+                                        </form>
+                                    </li>
+
+                                    <li class="list-group-item list-group-item-light">Calendars</li>
+                                    <li class="list-group-item list-group-item-light">etc</li>
+                                </ul>
+                            </p>
+                        </div>
                     </div>
-                </div>
+                {% endif %}
             </div>
         </main>
 
