@@ -2,4 +2,89 @@
 
 {% block content %}
 	<h1>About Page</h1>
+	<p>
+		<h5><b><u>This is my Personal Project.</u></b></h5>
+
+		<h4>Project Name – Twitter Clone</h4>
+
+		<br>
+		The Technologies with which I worked with while making personal project ->
+
+		<ol>
+			<li>Python</li>
+			<li>Flask</li>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>Wtf-forms</li>
+			<li>Sql-Alchemy</li>
+			<li>Bootstrap</li>
+			<li>Jinja</li>
+		</ol>
+
+
+		Apart from these, I have gone through <b>flask-modules, javascript and jquery stuff over</b>, through online websites.
+		<br><br>
+
+		The functionalities that my project cover are –
+
+		<ol>
+			<li><b>Login/Logout/Register</b></li>
+			<span>
+				Along with Login/Logout, I have also used various validators(database validations and frontend validations using boostrap) for validating the login and logout form. Also, I have encrypted the password which will be done at the time of registration. All validations will be done at the time of registration also.
+			</span>
+
+			<li><b>CRUD (create, update, delete)</b></li>
+			<span>
+				We can update the post, delete the post, and create a new post. Also, I have added a feature of having profile picture in the post(note – name of picture will be saved using random hex numbers generated everytime with the help of python module). Also, I have added few conditions such as one cant do CRUD operations until he is logged in, and if he triggered any of these events before login, he will be redirected to login/register page.
+			</span>
+			
+			<li><b>Custom Error Pages</b></li>
+			<span>
+				I have created custom error pages, which will be displayed if a wrong url or page is triggered before fulfilling the condition.
+			</span>
+
+			<li><b>Author Specific Posts</b></li>
+			<span>
+				Added a functionality, such that on clicking on the name of the author, we can view all the posts posted by that particular author.
+			</span>
+
+			<li><b>SideBar filters</b></li>
+			<span>
+				Added a functionality of filter the post by title search, date search and author search.
+			</span>
+
+			<li><b>Pagination functionality</b></li>
+			<span>
+				Added Pagination functionality – in this we can see only a specific number of pages at a time and rest all the pages, can be shown by moving to those page numbers.
+			</span>
+			
+			<li><b>Database</b></li>
+			<span>
+				Everything functionality is connected with the database(sql-alchemy).
+			</span>		
+			
+			<li><b>Python & Flask modules</b></li>
+			<span>
+				Learned about Packages, routing, models, modules, blueprint and configurations, and tried to follow the MVC structure. And also learned about various other flask and flask related modules and python modules.
+			</span>
+			
+			<li><b>Forgot & Reset Password</b></li>
+			<span>
+				Added a functionality of forget password and reset password and reset email using python module.
+			</span>
+
+			<li><b>...</b></li>
+		</ol>
+	</p>
+
+	<br>
+	<p>
+		For more information and features, try and explore the application yourself ...
+	</p>
+
+	<p class="cp-text" style="text-align: right; background-color: lightsteelblue;">
+	    <b>
+	    	© Copyright 2021 - Akshat Jain. All rights reserved.
+	    </b>
+	</p>
 {% endblock content %}
