@@ -42,8 +42,9 @@ def searchAuthor():
 	page = request.args.get('page', 1, type=int)
 	
 	search_author = request.args.get('search-author')
+	search_author = f'%{search_author}%'
 
-	user = User.query.filter_by(username=search_author).first_or_404()
+	user = User.query.filter(User.username.contains(search_author)).first_or_404()
 	posts = Post.query.filter_by(author=user).order_by(Post.date_posted.desc()).paginate(page=page, per_page=50)
 
 	return render_template('home.html', posts=posts)
